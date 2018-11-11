@@ -53,7 +53,7 @@ export class AppComponent {
     this.title = 'Bad!';
     this.pageWindow.pageData = [];
     $('#get-data').on('click', this.getData);
-    $('#change-button').on('click', this.changeTitle.bind(this));
+    $('#change-button').on('click', this.changeTitle);
     $('#reset-button').on('click', () => this.resetPage());
   }
 
