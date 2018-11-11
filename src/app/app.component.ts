@@ -9,18 +9,7 @@ import {delay, map, tap} from 'rxjs/operators';
   template: `
     <div class="bad-container">
       <h1>{{title}}</h1>
-      <p>Find all the mistakes in this component and rewrite to conform to the to acceptance criteria.</p>
-      <div>
-        <h3>Acceptance Criteria</h3>
-        <ul>
-          <li>Project should compile and work with no console errors.</li>
-          <li>Component should contain no syntactical mistakes.</li>
-          <li>Component should conform to current Angular standards.</li>
-          <li>Component should conform to current TypeScript and ES6 standards.</li>
-          <li>Component should correctly implement all functionality in the 'do-stuff' section.</li>
-        </ul>
-      </div>
-      
+      <acceptance-criteria></acceptance-criteria>
       <div class="do-stuff">
         <h1>Do Stuff</h1>
         <div class="removal section">
@@ -38,6 +27,9 @@ import {delay, map, tap} from 'rxjs/operators';
             <li *ngFor="let d of pageWindow.pageData">{{d}}</li>
           </ol>
         </div>
+        <div class="reset section">
+          <button id="reset-button">Reset Page</button>
+        </div>
       </div>
     </div>
   `,
@@ -51,16 +43,18 @@ import {delay, map, tap} from 'rxjs/operators';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-  title = 'bad';
+  title;
 
   constructor() {
-    (<any>window).pageData = [];
     $('#remove-button').on('click', this.RemoveHeader);
   }
 
   ngOnInit() {
+    this.title = 'Bad!';
+    this.pageWindow.pageData = [];
     $('#get-data').on('click', this.getData);
-    $('#change-button').on('click', this.changeTitle);
+    $('#change-button').on('click', this.changeTitle.bind(this));
+    $('#reset-button').on('click', () => this.resetPage());
   }
 
   RemoveHeader() {
@@ -83,6 +77,10 @@ export class AppComponent {
     }
 
     this.title = text;
+  }
+
+  resetPage() {
+    this.ngOnInit();
   }
 
   get pageWindow(): any {
