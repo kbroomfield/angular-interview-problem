@@ -18,3 +18,5 @@ This project contains a *very* bad Angular component that needs to be rewritten.
 + Open a browser to the designated URL, see what works, see what doesn't work, and then get to work!
 
 **A Note**: It will probably be helpful to have an IDE that supports code highlighting on the inline HTML. Alternatively, you can split the template and styles into separate HTML and CSS files.
+
+**Another Note**: You will be tempted to remove the comments ignoring TSLint. This will help you fix some syntax areas, bit it will only get you so far. Good luck!
