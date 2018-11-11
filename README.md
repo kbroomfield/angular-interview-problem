@@ -14,7 +14,9 @@ This project contains a *very* bad Angular component that needs to be rewritten.
 + Angular CLI (`npm install -g @angular/cli` or `yarn global add @angular/cli`)
 
 ## To Get Started
-+ Run the command `ng serve`
++ Clone repo
++ Run `yarn` or `npm install` from project directory
++ Run the command `ng serve` from project directory
 + Open a browser to the designated URL, see what works, see what doesn't work, and then get to work!
 
 **A Note**: It will probably be helpful to have an IDE that supports code highlighting on the inline HTML. Alternatively, you can split the template and styles into separate HTML and CSS files.
