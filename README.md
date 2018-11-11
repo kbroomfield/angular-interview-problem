@@ -1,5 +1,5 @@
 # Angular Interview Problem
-This project contains a *very* bad Angular component and service that need to be rewritten. The acceptance critera are outlined in `app.component.ts` but are listed here as well.
+This project contains a *very* bad Angular component and service that need to be rewritten. The acceptance critera are outlined in `AcceptanceCriteriaComponent` but are listed here as well.
 
 
 + Project should compile and work with no console errors.
