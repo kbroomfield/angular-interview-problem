@@ -58,7 +58,7 @@ export class AppComponent {
   }
 
   RemoveHeader() {
-    $('#bad-header').remove();
+    $('.bad-header').remove();
   }
 
   getData() {
