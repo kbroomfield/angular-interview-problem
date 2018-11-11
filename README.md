@@ -3,11 +3,12 @@ This project contains a *very* bad Angular component that needs to be rewritten.
 
 
 + Project should compile and work with no console errors.
-+ Component should contain no syntactical mistakes.
-+ Component should conform to current Angular standards.
-+ Component should conform to current TypeScript and ES6 standards.
-+ Component should correctly implement all functionality in the 'do-stuff' section.
++ Project should contain no syntactical mistakes.
++ Project should conform to current Angular standards.
++ Project should conform to current TypeScript and ES6 standards.
++ `AppComponent` should correctly implement all functionality in the 'do-stuff' section.
 + It is NOT required to de-inline the component, thought it may be helpful.
++ Bonus points for listing the mistakes you found in `data.json`
 
 ## Pre-reqs
 + Node.JS

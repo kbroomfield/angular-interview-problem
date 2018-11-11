@@ -1,8 +1,7 @@
 /* tslint:disable */
 import {Component, ViewEncapsulation} from '@angular/core';
 import * as $ from 'jquery';
-import { of } from 'rxjs';
-import {delay, map, tap} from 'rxjs/operators';
+import {BadService} from './bad.service';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +11,8 @@ import {delay, map, tap} from 'rxjs/operators';
       <acceptance-criteria></acceptance-criteria>
       <div class="do-stuff">
         <h1>Do Stuff</h1>
-        <div class="removal section">
-          <h2 class="bad-header">If you click the button, I should be removed!</h2>
+        <div id="removal" class="removal section">
+          <h2 id="header-to-remove" class="bad-header">If you click the button, I should be removed!</h2>
           <button id="remove-button">Remove Text</button>
         </div>
         <div class="change-title section">
@@ -46,7 +45,6 @@ export class AppComponent {
   title;
 
   constructor() {
-    $('#remove-button').on('click', this.RemoveHeader);
   }
 
   ngOnInit() {
@@ -55,6 +53,12 @@ export class AppComponent {
     $('#get-data').on('click', this.getData);
     $('#change-button').on('click', this.changeTitle);
     $('#reset-button').on('click', () => this.resetPage());
+    $('#remove-button').on('click', this.RemoveHeader);
+
+    // Add removal text if it isn't there.
+    if ( !document.getElementById('header-to-remove') ) {
+      $('#remove-button').before('<h2 id="header-to-remove" class="bad-header">If you click the button, I should be removed!</h2>');
+    }
   }
 
   RemoveHeader() {
@@ -62,11 +66,8 @@ export class AppComponent {
   }
 
   getData() {
-    of(['Bad 1', 'Bad 2', 'Bad 3', 'Bad 4', 'Bad 5']).pipe(
-      delay(700)
-    ).toPromise()
-      .then(results => (<any>window).pageData = results)
-      .catch(err => console.log("Oh no, an error occured!", err));
+    const service = new BadService();
+    service.getData().then(d => (<any>window).pageData = d);
   }
 
   changeTitle() {
