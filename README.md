@@ -1,5 +1,5 @@
 # Angular Interview Problem
-This project contains a *very* bad Angular component that needs to be rewritten. The acceptance critera are outlined in `app.component.ts` but will be added here as well.
+This project contains a *very* bad Angular component and service that need to be rewritten. The acceptance critera are outlined in `app.component.ts` but are listed here as well.
 
 
 + Project should compile and work with no console errors.
@@ -22,4 +22,4 @@ This project contains a *very* bad Angular component that needs to be rewritten.
 
 **A Note**: It will probably be helpful to have an IDE that supports code highlighting on the inline HTML. Alternatively, you can split the template and styles into separate HTML and CSS files.
 
-**Another Note**: You will be tempted to remove the comments ignoring TSLint. This will help you fix some syntax areas, bit it will only get you so far. Good luck!
+**Another Note**: You will most likely remove the comments ignoring TSLint for `AppComponent`. This will help you fix some areas, but it will only get you so far. Good luck!
