@@ -68,7 +68,6 @@ export class AppComponent {
   getData() {
     const service = new BadService();
     service.getData()
-      .then(data => alert(data.length + ' records were retrieved!'))
       .catch(err => alert('Page data was not retrieved :( ' + err));
   }
 
