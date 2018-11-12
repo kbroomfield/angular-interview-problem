@@ -20,10 +20,10 @@ import {BadService} from './bad.service';
           <input type="text" id="title-input" placeholder="New header...">
         </div>
         <div class="display-data section">
-          <button id="get-data">Get Data</button>
-          <h4 style="margin:10px 0 0 0">Data</h4>
+          <button id="get-data">Get Party Attendees</button>
+          <h4 style="margin:10px 0 0 0">Partiers</h4>
           <ol>
-            <li *ngFor="let d of pageWindow.pageData">{{d}}</li>
+            <li *ngFor="let d of pageWindow.pageData">{{d.name}}</li>
           </ol>
         </div>
         <div class="reset section">
