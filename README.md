@@ -6,9 +6,8 @@ This project contains a *very* bad Angular component and service that need to be
 + Project should contain no syntactical mistakes.
 + Project should conform to current Angular standards.
 + Project should conform to current TypeScript and ES6 standards.
-+ `AppComponent` should correctly implement all functionality in the 'do-stuff' section.
++ `AppComponent` should correctly implement all functionality in the 'do-stuff' (located in the `AppComponent` HTML template).
 + It is NOT required to de-inline the component, thought it may be helpful.
-+ Bonus points for listing the mistakes you found in `data.json`
 
 ## Pre-reqs
 + Node.JS
