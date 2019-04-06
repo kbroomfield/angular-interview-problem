@@ -6,7 +6,8 @@ This project contains a *very* bad Angular component and service that need to be
 + Project should contain no syntactical mistakes.
 + Project should conform to current Angular standards.
 + Project should conform to current TypeScript and ES6 standards.
-+ `AppComponent` should correctly implement all functionality in the 'do-stuff' (located in the `AppComponent` HTML template).
++ `AppComponent` should correctly implement all functionality in the 'do-stuff' section (located in the `AppComponent` HTML template).
++ `PartyService` should conform to standards for an Angular HTTP service.
 + It is NOT required to de-inline the component, thought it may be helpful.
 + Bonus points for identifying why `Change Page Header` does not function as currently implemented.
 

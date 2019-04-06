@@ -1,7 +1,7 @@
 /* tslint:disable */
 import {Component, ViewEncapsulation} from '@angular/core';
 import * as $ from 'jquery';
-import {BadService} from './bad.service';
+import {PartyService} from './party.service';
 
 @Component({
   selector: 'app-root',
@@ -66,7 +66,7 @@ export class AppComponent {
   }
 
   getData() {
-    const service = new BadService();
+    const service = new PartyService();
     service.getData()
       .catch(err => alert('Page data was not retrieved :( ' + err));
   }

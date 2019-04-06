@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import * as $ from 'jquery';
 
+// This is an HTTP service intended to hit some API to get a list of party attendees.
 @Injectable({
   providedIn: 'root'
 })
-export class BadService {
+export class PartyService {
   constructor() { }
 
   public getData(refreshData = false): Promise<any> {
