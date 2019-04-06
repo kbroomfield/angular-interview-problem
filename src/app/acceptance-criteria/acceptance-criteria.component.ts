@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
         <li>Project should conform to current Angular standards.</li>
         <li>Project should conform to current TypeScript and ES6 standards.</li>
         <li><code>AppComponent</code> should correctly implement all functionality in the 'do-stuff' section.</li>
-        <li>Bonus points for listing the mistakes you found in <code>data.json</code></li>
+        <li>Bonus points for identifying why <code>Change Page Header</code> does not function as currently implemented.</li>
       </ul>
     </div>
   `
