@@ -16,7 +16,7 @@ import {PartyService} from './party.service';
           <button id="remove-button">Remove Text</button>
         </div>
         <div class="change-title section">
-          <button id="change-button" style="margin-right:10px;">Change Page Header</button>
+          <button id="change-button" style="margin-right:10px;">Change Page Title</button>
           <input type="text" id="title-input" placeholder="New header...">
         </div>
         <div class="display-data section">
